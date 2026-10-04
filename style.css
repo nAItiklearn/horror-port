@@ -7,13 +7,12 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background: #090909;
     font-family: Georgia, 'Times New Roman', Times, serif;
     min-height: 100vh;
     background-image:url("image.png");
     background-size: cover;
     background-position: center;
-    background-repeat: fixed;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     color:#e8e8e8
 }
@@ -207,6 +206,9 @@ nav a:hover{
     transform:translateY(-3px);
 }
 .number{
+    margin-bottom: auto;
+}
+.number{
     display:block;
     margin-bottom:70px;
     color:#555;
@@ -227,7 +229,7 @@ nav a:hover{
 }
 .project a{
     display: inline-block;
-    margin-top:30px;
+    margin-top:auto;
     color:#aaa;
     font-family: monospace;
     border-bottom: 1px solid #444;
@@ -299,4 +301,126 @@ nav a:hover{
     color:red;
     font-family: monospace;
     font-size: 0.65rem;
+}
+#dontTouch{
+    color:#8b0000;
+}
+#dontTouch:hover{
+    color:#ff0000;
+    text-shadow: 0 0 5px red;
+}
+#jumpscare{
+    position: fixed;
+    inset:0;
+    z-index: 99999;
+    display: none;
+    background: #000;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+#jumpscare img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    user-select:none;
+    pointer-events: none;
+}
+/*glitch*/
+#jumpscare::before,
+#jumpscare::after{
+    content:"";
+    position: absolute;
+    inset:0;
+    pointer-events: none;
+
+}
+#jumpscare::before{
+    background: repeating-linear-gradient(
+        0deg,
+        transparent 0px,
+        transparent 3px,
+        rgba(225,225,225,0.05) 4px,
+        transparent 5px
+    );
+    mix-blend-mode: screen;
+    animation: scanlines 0.15s infinite;
+}
+#jumpscare::after {
+    background: rgba(255,0,0,0.04);
+
+    animation: screenGlitch 0.12s infinite;
+}
+
+
+/* SCREEN SHAKE */
+
+.glitch-active {
+    animation: shake 0.08s infinite;
+}
+
+@keyframes shake {
+
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-4px, 2px);
+    }
+
+    40% {
+        transform: translate(4px, -2px);
+    }
+
+    60% {
+        transform: translate(-2px, -4px);
+    }
+
+    80% {
+        transform: translate(3px, 3px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes scanlines {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(6px);
+    }
+}
+
+@keyframes screenGlitch {
+
+    0% {
+        opacity: 0.1;
+        transform: translate(0);
+    }
+
+    25% {
+        opacity: 0.3;
+        transform: translate(-5px, 2px);
+    }
+
+    50% {
+        opacity: 0.05;
+        transform: translate(4px, -2px);
+    }
+
+    75% {
+        opacity: 0.2;
+        transform: translate(2px, 4px);
+    }
+
+    100% {
+        opacity: 0.1;
+        transform: translate(0);
+    }
 }
