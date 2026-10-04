@@ -123,7 +123,7 @@ nav a{
     font-size: 0.72rem;
 }
 .status-row span{
-    color:#8e5151;
+    color:#f10505;
 }
 .warning{
     margin-top: 30px;
@@ -180,4 +180,37 @@ nav a{
 }
 .project a:hover{
     color:#fff;
+}
+
+.transmission-box{
+    padding:40px;
+    border:1px solid #292929;
+    background:linear-gradient(135deg, #0b0b0b, #909090);
+    font-family: monospace;
+    max-width: 800px;
+}
+.terminal-label{
+    margin-bottom: 25px;
+    color:#a51d1d;
+    font-size:0.7rem;
+}
+.terminal-text{
+    max-width: 650px;
+    margin-bottom:40px;
+    color:#aaa;
+    font-size: 1.05rem;
+}
+.single-line{
+    display:flex;
+    justify-content: space-between;
+    padding: 13px;
+    border-top: 1px solid #222;
+}
+.single-line span{
+    color:#555;
+
+}
+.signal-line strong{
+    color:#ccc;
+    
 }
