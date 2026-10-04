@@ -182,11 +182,33 @@
         </footer>
 
         <div id="jumpscare">
-            <img src="jumpscare.png" alt="">
+           
             <div class="glitch-lines"></div>
         </div>
         <audio id="jumpscareVoice" src="jumpscare.mp3"></audio>
         <audio id="horrorAudio" src="long.mp3" loop></audio>
+        <script>
+        const dontTouch=document.getElementById("dontTouch");
+        const jumpscare=document.getElementById("jumpscare");
+        const voice =document.getElementById("jumpscareVoice");
+        const horrorAudio=document.getElementById("horrorAudio");
+        dontTouch.addEventListener("click", function(event){
+            event.preventDefault();
+            jumpscare.style.display="flex";/*show jumpscare*/
+            document.body.classList.add("glitch-active");/*glitch screen*/
+            voice.currentTime=0;
+            voice.play();
+
+            horrorAudio.currentTime=0;
+            horrorAudio.play();
+            setTimeout(function(){
+                jumpscare.style.display="none";
+
+            }, 3000)
+            
+
+        });
+        </script>
 
         
     </body>
