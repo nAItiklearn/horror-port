@@ -79,3 +79,26 @@ nav a{
 .intro strong{
     color:#fff
 }
+
+.buttons{
+    display: flex;
+    gap:11px;
+    flex-wrap:wrap;
+    margin-top: 36px;
+    margin-bottom: 100px;
+}
+.button{
+    display:inline-block;
+    padding:11px 19px;
+    border:1px solid #444;
+    font-size:0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition:background 0.2s ease, color 0.2s ease ,border 0.2s ease;
+}
+.button:hover{
+    background: #d50707;
+    color:#000;
+    border-color:#fff
+}
+
