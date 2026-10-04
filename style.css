@@ -8,11 +8,30 @@ html{
 }
 body{
     background: #090909;
-    color: #e8e8e8;
-    font-family:Arial, Helvetica, sans-serif;
-
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    min-height: 100vh;
+    background-image:url("image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: fixed;
+    background-attachment: fixed;
+    color:#e8e8e8
 }
 
+.section{
+    width:min(1400px, 92%);
+    margin:0  auto;
+    padding:120px 0;
+}
+.section-head h2{
+    margin-top:8px;
+    line-height: 0.9;
+}
+.section-note{
+    color:#777;
+    font-family: monospace;
+    font-size: 0.8rem;
+}
 .header{
     display:flex;
     justify-content:space-between;
@@ -27,8 +46,11 @@ body{
     backdrop-filter: blur(10px);
 }
 .logo{
-    font-weight: 700;
-    letter-spacing: .15em;
+    color:#dddddd;
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.2em;
 
 }
 nav{
@@ -39,27 +61,43 @@ nav{
 nav a{
     font-size: 0.8rem;
     text-transform: uppercase;
-    color:#999;
+    color:#aaaaaa;
+    text-decoration: none;
+
     letter-spacing: 0.08em;
-    transition:color 0.2s ease;
+    transition:0.3s
 
-
+}
+nav a:hover{
+    color:#d20b0b;
+    text-shadow: 0 0 10px #8b0000;
 }
 
 
 .hero{
-    min-height: 90vh;
+    min-height: 88vh;
     width: min(1200px, 88%);
     margin:0 auto;
     display: grid;
     grid-template-columns: 1fr 300px;
-    gap:67px;
+    gap:100px;
     align-items: center;
+}
+.hero-text{
+    max-width: 850px;
+    overflow: hidden;
+}
+.small-line{
+    color:#aaaaaa;
+    font-family: monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
 }
 .type-line{
     margin:25px 0;
     font-family:monospace;
     color:#c62828;
+    font-size: 0.9rem;
 
 }
 .cursor{
@@ -70,11 +108,21 @@ nav a{
         opacity: 0;
     }
 }
+.hero h1{
+    line-height: 0.85;
+    letter-spacing: -0.06;
+    margin-bottom: 40px;
+
+}
 .hero h1 span{
-    max-width:600px;
-    margin-top:40px;
-    color:#999;
-    font-size:1rem
+   color:#999999;
+}
+
+.intro{
+    max-width: 720px;
+    color:#dddddd;
+    font-size: 1.15rem;
+    line-height: 1.7;
 }
 .intro strong{
     color:#fff
@@ -89,9 +137,11 @@ nav a{
 }
 .button{
     display:inline-block;
-    padding:11px 19px;
-    border:1px solid #444;
+    padding:14px 22px;
+    border:1px solid #555555;
+    color:#cccccc;
     font-size:0.75rem;
+    background: #05050555;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     transition:background 0.2s ease, color 0.2s ease ,border 0.2s ease;
@@ -99,13 +149,18 @@ nav a{
 .button:hover{
     background: #d50707;
     color:#000;
-    border-color:#fff
+    border-color:#fff;
+    transform: translateY(-2px);
 }
-
+.button.red{
+    border-color: #750000;
+    color:#d20b0b;
+}
 
 .status-box{
     border:1px solid #e6eee7;
     padding:25px;
+    background: #05050599;
     
 }
 .box-title{
@@ -135,16 +190,16 @@ nav a{
 
 .project-grid{
     display: grid;
-    grid-template-columns: repeat(2 1fr);
-    background: #292929;
+    grid-template-columns: repeat(2 ,1fr);
+    background: #05050599;
     border: 1px solid #292929;
     gap:1px;
 }
 .project{
     position: relative;
-    min-height: 300px;
+    min-height: 245px;
     padding:35px;
-    background:#090909;
+    background: #05050599;
     transition:background .25s ease, transform 0.25s ease;
 }
 .project:hover{
@@ -183,9 +238,9 @@ nav a{
 }
 
 .transmission-box{
-    padding:40px;
+    background: #05050599;
     border:1px solid #292929;
-    background:linear-gradient(135deg, #0b0b0b, #090909);
+    padding:40px;
     font-family: monospace;
     max-width: 800px;
 }
@@ -200,13 +255,13 @@ nav a{
     color:#aaa;
     font-size: 1.05rem;
 }
-.single-line{
+.signal-line{
     display:flex;
     justify-content: space-between;
     padding: 13px;
     border-top: 1px solid #222;
 }
-.single-line span{
+.signal-line span{
     color:#555;
 
 }
@@ -225,7 +280,7 @@ nav a{
     padding:70px;
     border:1px solid #292929;
     text-align: center;
-    background: #0b0b0b;
+    background: #05050599;
 
 }
 .contact-box h2{
@@ -244,5 +299,4 @@ nav a{
     color:red;
     font-family: monospace;
     font-size: 0.65rem;
-
 }
