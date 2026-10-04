@@ -4,7 +4,7 @@
 - <img width="1860" height="928" alt="image" src="https://github.com/user-attachments/assets/54757650-6b62-4546-bf13-1ba0932c4091" />
 
 
-GO TRY IT -
+GO TRY IT - https://naitiklearn.github.io/horror-port/
 
 ## FEATURES
 the websites contains my project details , github , email , about me section . 
