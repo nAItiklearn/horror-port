@@ -1,6 +1,8 @@
 
 # SPOOKY PORT
 - Hi , I made this simple , spooky , glitchy portfolio which may first look like a normal one , but who knows what happens when you click the "dont click" button
+- <img width="1860" height="928" alt="image" src="https://github.com/user-attachments/assets/54757650-6b62-4546-bf13-1ba0932c4091" />
+
 
 GO TRY IT -
 
